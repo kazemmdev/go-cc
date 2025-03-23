@@ -49,7 +49,7 @@ func UpdateTodoHandler(w http.ResponseWriter, r *http.Request) {
 	todo.Done = updatedTodo.Done
 	db.DB.Save(&todo)
 
-	http.Error(w, "Todo not found", http.StatusNotFound)
+	json.NewEncoder(w).Encode(todo)
 }
 
 func DeleteTodoHandler(w http.ResponseWriter, r *http.Request) {
