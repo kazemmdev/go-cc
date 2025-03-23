@@ -1,6 +1,6 @@
 .idea
 *.db
 
-main
-
 .env
+
+cmd/server/main
