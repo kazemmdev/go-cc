@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    container_name: app
+    restart: always
+    working_dir: /app
+    env_file: .env
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./:/app
